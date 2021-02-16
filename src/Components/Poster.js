@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   font-size: 12px;
@@ -53,13 +53,13 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
           bgUrl={
             imageUrl
               ? `https://image.tmdb.org/t/p/w300${imageUrl}`
-              : require("../assets/noPosterSmall.png").default
+              : require('../assets/noPosterSmall.png').default
           }
         />
         <Rating>
           <span role="img" aria-label="rating">
             ⭐️
-          </span>{" "}
+          </span>{' '}
           {rating} / 10
         </Rating>
       </ImageContainer>

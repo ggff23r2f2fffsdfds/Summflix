@@ -1,6 +1,6 @@
-import { moviesApi } from "api";
-import React from "react";
-import HomePresenter from "./HomePresenter";
+import { moviesApi } from 'api';
+import React from 'react';
+import HomePresenter from './HomePresenter';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default class extends React.Component {

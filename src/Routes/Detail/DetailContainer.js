@@ -1,6 +1,6 @@
-import { moviesApi, tvApi } from "api";
-import React from "react";
-import DetailPresenter from "./DetailPresenter";
+import { moviesApi, tvApi } from 'api';
+import React from 'react';
+import DetailPresenter from './DetailPresenter';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default class extends React.Component {
@@ -13,7 +13,7 @@ export default class extends React.Component {
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movie/"),
+      isMovie: pathname.includes('/movie/'),
     };
   }
   async componentDidMount() {
@@ -26,7 +26,7 @@ export default class extends React.Component {
     const { isMovie } = this.state;
     const parseId = parseInt(id);
     if (isNaN(parseId)) {
-      return push("/");
+      return push('/');
     }
     let result = null;
     try {
@@ -38,6 +38,7 @@ export default class extends React.Component {
     } catch {
       this.setState({ error: "Can't find Anything" });
     } finally {
+      console.log(result);
       this.setState({
         loading: false,
         result,
